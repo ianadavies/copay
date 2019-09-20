@@ -214,7 +214,7 @@ export class ProfileProvider {
 
     // Workaround to avoid wrong order relatad to async functions
     if (keyId) this.walletsGroups[keyId] = {};
-    this.wallet[walletId] = {};
+    this.wallet[walletId] = { };
 
     // INIT WALLET VIEWMODEL
     wallet.id = walletId;

@@ -9,6 +9,7 @@ export class WalletSelectorComponent extends ActionSheetParent {
   public wallets;
   public walletsBtc;
   public walletsBch;
+  public walletsStrat;
   public title: string;
   public selectedWalletId: string;
 
@@ -24,10 +25,11 @@ export class WalletSelectorComponent extends ActionSheetParent {
   }
 
   private separateWallets(): void {
+    this.walletsStrat = this.wallets.filter(wallet => wallet.coin === 'strat');
     this.walletsBtc = this.wallets.filter(wallet => wallet.coin === 'btc');
     this.walletsBch = this.wallets.filter(wallet => wallet.coin === 'bch');
   }
-
+  
   public optionClicked(option): void {
     this.dismiss(option);
   }

@@ -29,6 +29,7 @@ export interface HistoryOptionsI {
 }
 
 export enum Coin {
+  STRAT = 'strat',
   BTC = 'btc',
   BCH = 'bch'
 }
